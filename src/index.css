@@ -45,7 +45,33 @@ code {
 
 #navRight {
   float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
 }
+
+#navRight>a {
+  display: flex;
+  text-decoration: none;
+  background-color: rgb(212, 212, 212);
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 12%;
+  transition: transform .75s;
+  align-items: center;
+}
+
+#navRight>a:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.377);
+  zoom: 105%;
+  transform: scale(1.05);
+
+}
+
 
 #container {
   position: relative;
