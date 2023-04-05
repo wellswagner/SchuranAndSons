@@ -1,20 +1,19 @@
 import React from "react";
-import lemonShark from "../lemonShark.jpg"
-
+import lemonShark from "../images/lemonShark.jpg"
+import redfish from "../images/redfish.jpg"
+import lemonSharkRelease from "../images/lemonSharkRelease.mp4"
+import redfish2 from "../images/redfish2.jpg"
 const Gallery = () => {
   return (
-    <img id="lemonShark" src={lemonShark} alt="lemonShark" />
-    // <div id="youTube">
-    //   <iframe
-    //     width="560"
-    //     height="315"
-    //     src="https://www.youtube.com/embed/ymvMmSxgboc"
-    //     title="YouTube video player"
-    //     frameborder="0"
-    //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    //     allowfullscreen
-    //   ></iframe>
-    // </div>
+    <>
+      <div id="galleryPhotos">
+        <img id="lemonShark" src={lemonShark} alt="lemonShark" />
+        <img id="redfish" src={redfish} alt="redfish" />
+        <img id="redfish2" src={redfish2} alt="redfish2" />
+        <img id="lemonSharkRelease" src={lemonSharkRelease} alt="lemonSharkRelease" />
+      </div>
+    </>
+
   );
 };
 

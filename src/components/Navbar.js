@@ -1,30 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../logo.png";
-import { SignedIn, UserButton } from "@clerk/clerk-react";
+import logo from "../images/logo.png";
+import { SignedIn, UserButton, useUser } from "@clerk/clerk-react";
 import "../index.css"
 
 const Navbar = ({ username, loggedIn }) => {
+  const { user } = useUser()
   return (
-    <div id="navbarMain">
-      <div id="navLeft">
-        <Link to="/">
-          <img id="logo" src={logo} alt="SchuranAndSons" />
-        </Link>
-        <h1>Schuran and Sons</h1>
+    <>
+      <div id="navbarMain">
+        <div id="navLeft">
+          <Link to="/">
+            <img id="logo" src={logo} alt="SchuranAndSons" />
+          </Link>
+          <h1>Schuran and Sons</h1>
+        </div>
+        <div id="navRight">
+          <SignedIn>
+            <h3 id="welcomeBanner">Welcome Back, {user.username} </h3>
+          </SignedIn>
+          {(username && loggedIn) && <h4>Welcome Back, {username}</h4>}
+          <Link to="/">Home</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/contact">Contact Us</Link>
+          <Link to="/Shop">Shop</Link>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
       </div>
-      <div id="navRight">
-        {(username && loggedIn) && <h4>Welcome Back, {username}</h4>}
-        <Link to="/">Home</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/contact">Contact Us</Link>
-        <Link to="/Login">Login/Register</Link>
-        <Link to="/Shop">Shop</Link>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      </div>
-    </div>
+    </>
   );
 };
 
