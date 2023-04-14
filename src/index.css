@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+
+/* Navbar Styling */
 #navbarMain {
   flex-direction: row;
   justify-content: space-between;
@@ -81,6 +83,10 @@ code {
   text-decoration: dotted;
 }
 
+/* Homepage Styling */
+
+
+/* Gallery Styling */
 #galleryPhotos {
   display: flex;
   flex-direction: row;
@@ -107,6 +113,8 @@ body {
   height: 100%;
 }
 
+
+/* Contact Styling */
 #aboutContent {
   display: flex;
   flex-direction: row;
@@ -126,6 +134,9 @@ body {
   border-radius: 4%;
 }
 
+
+
+/* Animation Styling */
 body {
   background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
   /* overflow: hidden; */

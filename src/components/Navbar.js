@@ -20,8 +20,8 @@ const Navbar = ({ username, loggedIn }) => {
             <h3 id="welcomeBanner">Welcome Back, {user.username} </h3>
           </SignedIn>
           {(username && loggedIn) && <h4>Welcome Back, {username}</h4>}
-          <a id="instagramLink" href="https://instagram.com/schuran_and_sons" rel="external" target="_blank">
-            <img src="../images/instagramIcon.png" alt={instagramIcon} />
+          <a href="https://instagram.com/schuran_and_sons" rel="external" target="_blank">
+            <img id="instagramLink" src={instagramIcon} alt="instagramIcon" />
           </a>
           <Link to="/">Home</Link>
           <Link to="/gallery">Gallery</Link>
