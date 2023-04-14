@@ -27,6 +27,7 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Shop from "./components/Shop";
+import Instagram from "./components/Instagram"
 import { Route, Routes } from "react-router-dom";
 import { ClerkProvider, RedirectToSignIn, SignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
 
@@ -44,6 +45,7 @@ const App = () => {
             <div id="main">
               <Routes>
                 <Route element={<Home />} path="/" />
+                <Route element={<Instagram />} path="/instagram" />
                 <Route element={<Gallery />} path="/gallery" />
                 <Route element={<Shop />} path="/shop" />
                 <Route element={<Contact />} path="/contact" />
