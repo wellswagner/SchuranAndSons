@@ -84,6 +84,12 @@ code {
 }
 
 /* Homepage Styling */
+#homePageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* Gallery Styling */
@@ -94,12 +100,14 @@ code {
   align-items: center;
   overflow-x: scroll;
   overflow-y: scroll;
+  flex-wrap: wrap;
 }
 
 #galleryPhotos>img {
   height: auto;
-  width: 500px;
+  width: 400px;
   border-radius: 4%;
+  margin: 3vh;
 }
 
 #container {

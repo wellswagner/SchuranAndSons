@@ -17,10 +17,10 @@ const Navbar = ({ username, loggedIn }) => {
         </div>
         <div id="navRight">
           <SignedIn>
-            <h3 id="welcomeBanner">Welcome Back, {user.username} </h3>
+            <h3 id="welcomeBanner">Welcome Back, {user.username}! </h3>
           </SignedIn>
           {(username && loggedIn) && <h4>Welcome Back, {username}</h4>}
-          <a href="https://instagram.com/schuran_and_sons" rel="external" target="_blank">
+          <a href="https://instagram.com/schuran_and_sons/" rel="external" target="_blank">
             <img id="instagramLink" src={instagramIcon} alt="instagramIcon" />
           </a>
           <Link to="/">Home</Link>
@@ -37,3 +37,5 @@ const Navbar = ({ username, loggedIn }) => {
 };
 
 export default Navbar;
+
+
