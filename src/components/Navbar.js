@@ -4,7 +4,6 @@ import logo from "../images/logo.png";
 import { SignedIn, UserButton, useUser } from "@clerk/clerk-react";
 import "../index.css"
 import instagramIcon from "../images/instagramIcon.png"
-
 const Navbar = ({ username, loggedIn }) => {
   const { user } = useUser()
   return (
@@ -21,7 +20,9 @@ const Navbar = ({ username, loggedIn }) => {
             <h3 id="welcomeBanner">Welcome Back, {user.username} </h3>
           </SignedIn>
           {(username && loggedIn) && <h4>Welcome Back, {username}</h4>}
-          <Link to="/instagram"><img id="instagramLink" src={instagramIcon} alt="instagramIcon" /></Link>
+          <a id="instagramLink" href="https://instagram.com/schuran_and_sons" rel="external" target="_blank">
+            <img src="../images/instagramIcon.png" alt={instagramIcon} />
+          </a>
           <Link to="/">Home</Link>
           <Link to="/gallery">Gallery</Link>
           <Link to="/contact">Contact Us</Link>
